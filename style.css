@@ -1,3 +1,5 @@
+/* —— style.css —— */
+
 /* —— basic reset —— */
 * {
   box-sizing: border-box;
@@ -8,7 +10,9 @@
 /* —— body + fonts —— */
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
+  font-weight: 300; /* 薄体，强调优雅简约 */
+  color: #000;
+  background-color: #fff;
   display: flex;
   justify-content: center;
 }
@@ -18,19 +22,25 @@ body {
   max-width: 900px;
 }
 
-/* header */
+/* —— header —— */
 .site-header {
   text-align: center;
   padding-top: 50px;
+}
+
+.logo {
+  max-height: 60px;
+  margin-bottom: 10px;
 }
 
 .site-title {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 10px;
+  color: #000;
 }
 
-/* chat window */
+/* —— chat window —— */
 .chatbox {
   margin: 40px 0;
 }
@@ -44,23 +54,32 @@ body {
   overflow-y: auto;
   background: #fafafa;
   white-space: pre-line;
+  display: flex;
+  flex-direction: column;
 }
 
-/* messages */
+/* —— messages —— */
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 12px;
 }
 
 .msg.user {
-  color: #000;
+  align-self: flex-end;
+  background-color: #ff003c;
+  color: #fff;
 }
 
 .msg.ai {
-  color: #666666;
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #000;
 }
 
-/* input row */
+/* —— input row —— */
 .chat-form {
   display: flex;
   gap: 12px;
@@ -72,6 +91,8 @@ body {
   padding: 12px;
   border: 1px solid #ccc;
   font-size: 18px;
+  background-color: #fff;
+  color: #000;
 }
 
 .chat-form input:focus {
@@ -99,15 +120,15 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #e3a535; /* 使用欧莱雅红 */
 }
 
 .chat-form button:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #e3a535; /* 欧莱雅金作为强调色 */
   outline-offset: 2px;
 }
 
-/* visually hidden */
+/* —— visually hidden —— */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -120,7 +141,7 @@ body {
   border: 0;
 }
 
-/* footer */
+/* —— footer —— */
 .site-footer {
   margin: 60px 0 40px;
   text-align: center;
@@ -139,5 +160,5 @@ body {
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #ff003c; /* 欧莱雅红，用于强调 */
 }
